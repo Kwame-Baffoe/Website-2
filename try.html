@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+    box-sizing: border-box;
+    transition:all ease-in-out 200ms ;
+}
+
+
+
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background-color: crimson;
+    
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+section::after,
+footer::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+
+/*column system*/
+
+[class^=col-]{
+    margin-top: 1em;
+    width: 100%;
+}
+
+[class^=col-]:first-child{
+    
+    margin-top: 0;
+}
+
+.col-1{
+    width: 33.333%;
+    float: left;
+}
+@media (min-width:40rem){
+    [class^=col-]{
+        float: left;
+        padding: 0 .5em;
+        margin-top: 0;
+        
+    }
+
+    [class^=col-]:first-child{
+    
+        padding-left: 0;
+    }
+    [class^=col-]:last-child{
+        
+        padding-right: 0;
+    }
+.col-3{
+    width: 50%;
+}
+
+.col-1{
+   width: 16.666%;
+}
+}
+
+
+
+
+
+/*typography*/
+h1{
+    font-weight: 300;
+    font-size: 1.74rem;
+    margin-top: 0;
+}
+
+p{
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
+
+}
+.title{
+    font-size: 2.5em;
+    margin-bottom: 1.8em;
+    font-weight: 900;
+    margin-top: 1em;
+}
+
+.title span{
+    font-weight: 200;
+    display: block;
+    font-size: .9em;
+}
+
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+@media (min-width:55rem){
+   .title{
+       font-size: 3.2rem;
+   } 
+}
+
+
+
+
+/*button*/
+.button{
+    display: inline-block;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border:2px solid rgb(172, 36, 81);
+    padding: .4em 1.75em;
+}
+
+.button-accent{
+    color: yellow;
+    background-color: rgba(0,0,0,0.6);
+}
+.button-accent:hover,
+.button-accent:focus{
+    background: rgb(238, 24, 106);
+    color: rgb(213, 213, 223);
+}
+
+@media (min-width:55rem){
+    .button{
+        font-size: 1.5rem;
+    }
+}
+
+.button-small{
+    font-size: 1rem;
+    font-weight: 900;
+}
+/*header*/
+header{
+    position: absolute;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+}
+
+#summerFood{
+    color: rgb(238, 24, 106);
+    font-size: 3.2em;
+
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin: .8em;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: .6em;
+    background: yellow;
+    color: black;
+    border-radius: 5%;
+}
+
+nav a:hover,
+nav a:focus{
+    font-size: 19px;
+    color: rgb(255, 19, 19);
+    background:rgb(58, 245, 21);
+}
+/* home hero*/
+.home-hero{
+    background-image: url(https://images.unsplash.com/photo-1551276705-0503a4b9d38c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    padding: 10em 0;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+@media(min-width:60rem){
+    .home-hero{
+        height: 100vh;
+        padding-top: 30vh;
+    }
+}
+
+/*home-about*/
+.home-about{
+    display: flex;
+}
+.home-about-textbox{
+     background-color: #232323;
+     padding: 3em;
+     width:100vw;
+     margin-left: -3%;
+     outline: 3px solid rgb(172, 36, 81);
+     outline-offset: -2.1em;
+     color: thistle;
+     position: relative;
+}
+
+.home-about-textbox h1{
+    color: rgb(172, 36, 81);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .6em;
+    background: #232323;
+    padding: 0 .25em;
+}
+
+@media (min-width:25rem){
+    h1{
+        font-size: 1.75rem;
+    }
+
+    .home-about-textbox h1{
+        top: 1em;
+        padding: 0 .25em;
+    }
+}
+@media (min-width:60rem){
+    h1{
+        font-size: 2rem;
+    }
+
+    .home-about-textbox h1{
+        top: .4em;
+        padding: 0 .25em;
+    }
+}
+
+.home-about{
+    background-color: rgba(243, 247, 26, 0.795) ;
+   
+    padding-bottom: 8em;
+}
+
+.home-about-textbox{
+    width: 50%;
+    margin-left: 4.5%;
+    text-align: left;
+    top: -4em;
+    padding:7em;
+    outline-offset: -3.9em;
+    box-shadow: 0 0 5em rgba(0,0,0,0.6);
+    
+}
+
+.home-about-textbox h1{
+    top: 1.6em;
+    left: 5rem;
+    transform: translateX(0);   
+}
+
+.home-about-menu{
+    
+    width: 20%;
+    margin-left: 20%;
+    background-color: #35df25;
+    padding: .5em;
+    text-align: center;
+    border-radius: 0 0 5% 5%;    
+}
+.home-about-menu ul{
+    list-style: none;
+    
+}
+.home-about-menu h3{
+     font-weight: 600;
+     top: -1em;
+     font-size: 2em;
+}
+.home-about-menu a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(206, 68, 26);
+    line-height: 2.5em;
+    font-weight: 900;
+    margin: 0 -2.3em;
+    padding: 2em;
+    font-size: 1.5em;
+}
+.home-about-menu a:hover,
+a:focus{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(15, 112, 139);
+    line-height: 1.5em;
+    font-weight: 900;
+    margin: 0 -2.3em;
+    font-size: 2em;
+}
+
+/*portfolio*/
+
+
+.portfolio{
+    margin: 3.5em 0 0;
+    
+}
+figure{
+    margin: 0;
+    position: relative;
+}
+.port-item{
+    outline: 4px double whitesmoke;
+    
+    
+    outline-offset: -.5em;
+    
+    
+}
+
+.port-item img{
+    display: block;
+
+}
+.port-desc{
+    position: absolute;
+    color: rgb(236, 240, 13);    
+    z-index: 100;
+    left: 5em;
+    right: 5em;
+    bottom: 1.4em;
+    background: rgba(0,0,0,0.5);
+    padding-bottom: 1em;
+}
+.port-desc p{
+    margin:1em;
+}
+
+@media (min-width:37rem){
+    .port-item{
+        width: 50%;
+        float: left;
+        padding: 5%;
+    }
+}
+@media (min-width:60rem){
+    .port-item{
+        width: 33.333%;
+        float: left;
+        padding: 5%;
+    }
+}
+
+
+/*cta*/
+
+.cta{
+    background-color: lightcoral;
+   margin-top: 5em; 
+   padding: 1.4em;
+}
+
+.button-dark{
+    color: yellow;
+    background-color: rgba(0,0,0,0.5);
+    margin-bottom: 1.5em;
+}
+.button-dark:hover,
+.button-dark:focus{
+    color: rgb(210, 224, 16);
+    background-color: #232323;
+}
+
+
+
+/*footer*/
+footer{
+    background-color: #232323;
+    color: ivory;
+    text-align: left;
+    padding: 5em 0;
+}
+    </style>
+</head>
+<body>
+<header>
+    <h1 id="summerFood">Summer Food</h1>
+    <nav>
+        <ul>
+            <li><a href="">Home</a> </li>
+            <li><a href="">About</a> </li>
+            <li><a href="">Contact</a> </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="home-hero">
+    <div class="container">
+    <h1 class="title">Enjoy your great meal
+    <span> we will make it special for you</span></h1>
+    <a href="" class="button button-accent">Our Dishes</a>
+</div>
+</section>
+
+
+<div class="container">
+<section class="home-about">
+    <div class="home-about-textbox">
+        <h1>WHAT WE SERVE</h1>
+        <p>
+            Lorem  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, temporibus? ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit odio temporibus eius maiores labore at similique quas recusandae itaque earum quod.
+        </p>
+        <p><strong> Lorem ipsum dolor sit amet</strong>hjjffdg ghjrtdg htykls fyuitu ghtjmfg hk fghgj hjkg  consectetur adipisicing elit. Facilis beatae, sit rerum quod error ducimus.</p>
+    </div>
+    <div class="home-about-menu">
+        <h3>You can have</h3>
+        <ul>
+            <li><a href="">Starter</a></li>
+            <li><a href="">Lunch</a></li>
+            <li><a href="">Drinks</a></li>
+            <li><a href="">Ice-Cream</a></li>
+        </ul>
+    </div>
+</section>
+</div>
+
+
+<section class="portfolio">
+    <h1>OUR MEALS</h1>
+    <figure class="port-item">
+        <img src="https://images.unsplash.com/photo-1559630854-e3615c5f4e46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+        <figcaption class="port-desc">
+            <p>Meal name</p>
+           
+            <a href="" class="button button-accent button-small">meal details</a>
+        </figcaption>
+    </figure>
+
+
+    <figure class="port-item">
+        <img src="https://images.unsplash.com/photo-1560180474-d197012265d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+        <figcaption class="port-desc">
+            <p>Meal name</p>
+            <a href="" class="button button-accent button-small">meal details</a>
+        </figcaption>
+    </figure>
+
+
+    <figure class="port-item">
+        <img src="https://images.unsplash.com/photo-1528316746172-63793f15de39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=400&q=60" alt="">
+        <figcaption class="port-desc">
+            <p>Meal name</p>
+            <a href="" class="button button-accent button-small">meal details</a>
+        </figcaption>
+    </figure>
+
+
+    <figure class="port-item">
+        <img src="https://images.unsplash.com/photo-1564671165093-20688ff1fffa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+        <figcaption class="port-desc">
+            <p>Meal name</p>
+            <a href="" class="button button-accent button-small">meal details</a>
+        </figcaption>
+    </figure>
+
+
+    <figure class="port-item">
+        <img src="https://images.unsplash.com/photo-1500630967344-3b1f546423ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+        <figcaption class="port-desc">
+            <p>Meal name</p>
+            <a href="" class="button button-accent button-small">meal details</a>
+        </figcaption>
+    </figure>
+
+
+    <figure class="port-item">
+        <img src="https://images.unsplash.com/photo-1505575967455-40e256f73376?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="">
+        <figcaption class="port-desc">
+            <p>Meal name</p>
+            <a href="" class="button button-accent button-small">meal details</a>
+        </figcaption>
+    </figure>
+
+
+</section>
+
+<section class="cta">
+    <div class="container" id="thankyou">
+        <h1 class="title">Great, to visit us
+        <span> Thank you</span></h1>
+        <hr>
+        <a href="" class="button button-dark">Hire me</a>
+    </div>
+
+</section>
+
+
+<footer>
+    <div class="container">
+    <div class="col-3">
+        <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio possimus adipisci quaerat qui vero. Animi? sit amet consectetur adipisicing elit. Deleniti soluta voluptatum sit quaerat aliquid vero eveniet aut odit labore architecto?</p>
+    </div>
+    
+    <div class="col-1">
+        <ul class="unstyled-list">
+            <li><strong>foodie</strong></li>
+            <li>starter</li>
+            <li>lunch</li>
+            <li>dinner</li>
+            <li>dessert</li>
+        </ul>
+    </div>
+
+    <div class="col-1">
+        <ul class="unstyled-list">
+            <li><strong>foodie</strong></li>
+            <li>starter</li>
+            <li>lunch</li>
+            <li>dinner</li>
+            <li>dessert</li>
+        </ul>
+    </div>
+
+    <div class="col-1">
+        <ul class="unstyled-list">
+            <li><strong>foodie</strong></li>
+            <li>starter</li>
+            <li>lunch</li>
+            <li>dinner</li>
+            <li>dessert</li>
+        </ul>
+    </div>
+</div>
+</footer>
+
+</body>
+</html>
